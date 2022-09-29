@@ -27,4 +27,7 @@ def solve2(equation):
         sol = dict(zip(letters, perm))
 
         if sum(get_value(word, sol) for word in left) == get_value(right, sol):
-            print('…
+            print(' + '.join(str(get_value(word, sol)) for word in left) + " = {} (mapping: {})".format(get_value(right, sol), sol))
+
+if _name_ == '_main_':
+    solve2('SEND + MORE = MONEY')
